@@ -11,6 +11,7 @@ Getting started with Workbox https://developers.google.com/web/tools/workbox/gui
 2. [Precaching files](https://developers.google.com/web/tools/workbox/guides/precache-files/)
    - Install workbox-cli (hence _yarn.lock_/_package.json_) => given up
    - Precache to make it available offline
+   - Switching to webpack
 
 ## Branches
 
