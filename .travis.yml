@@ -1,0 +1,40 @@
+language: node_js
+node_js:
+  - node
+cache:
+  directories:
+    - node_modules
+
+env:
+  global:
+    # $GITHUB_TOKEN
+    secure: 'azMV1AtshLdypgqIpQaOoSc1K40VeCTUiXlvNE7HpAVVf9D27u2YGgZHCclBPtLl/XSpJxie+0oNqxbOsx0ovmUmqPu4FjPq8WieJqJkPgSq7xx9VuMaKByUNfmXQ1GrJTGqQ3Jmp58YKkDQxFiXupkV3AOwT/aIL3K8m4NPPq7/YDKLg2VuEOVG8Sr2uHqBoc6/yxIvjZaV1hUe2K8BY06DCpr7CrEvXSda+mwo+DHBlOaQKpeXjRqnF7GkuJEDpS1eR8+JbnSQeHT9gksr6EKUrrT0rMWIsg/n1IpDOkTwd8LAnIgv7BHRGHSoWkLWlRyLbp2MCxOHL1ugcexBhcFXpeCaY+t4JlWhyd4FmVHtnCKng5ePsZ8i2llHP7+U55nvXNVRd5NWu2rPLzOVeFukHHQR0KeR6aHzWfQGKaHNl4d8vZN4TtECwAoRzTEM0GDGUR3QiRWNwwpf7u89ngv6p7T99PPYjRHttr09CBtFbk77meRtcXNxSo92Jd/b7g/szagQi6Z1V6j0TpD+jqKBdLbJdtEZl6BcV4S51eKdROg3rvHBncgwvSOcLoU5TThsutlfv731l4eg3S09YmS8IopTEtfIqD+4lE3JjrvDRyMPEkEWzE8Y2yhKn703gJCT0x02GgCtWskbPKcUdZRkfLijxrD+jhXTLHXGTPQ='
+
+install:
+  - yarn install
+
+script:
+  - yarn run build
+  # Ensure builds are properly done
+  - ls dist/
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist
+  keep-history: true
+  verbose: true
+  # build on master only
+  on:
+    branch: master
+  # default values
+  target-branch: gh-pages
+
+notifications:
+  email: false
+  slack:
+    rooms:
+      - secure: 'P5vdOmYnxtNJ+y/YOvUC0Wlp7jjcZsZZXxUoh5AKvjPwTsVDGPKGeX+k43fMxGDo11stpsK2uWbBIaPD2ZGiIlR4unJ2E5goujpEmQE3bTSk8fdwVj65UNaZ/+ySjLEBsEV3q0tAFu/M8AQkqH6F1o5ivoUAF9VGm0y73rdGnm6AtJZ/HD1+mXmKg/TlsuPoFUILIlDq4t6ZltfykMEWyjWZfo29lKjiXaMYx5pq95/ShMl7gL6DEXk11kWs1upRqBHm+3shLQTIrXOEAmeNz3P5vrC8k3i5M39fUYY85kOF8yn3oO2tj3PfG6xKUs1QbDr+hFgAV9JZBxF5nc/lPzRm+uHgSXDefSOnHLZ5ujf0FOPGtXxCr3yCfWYU0f7ZuYxDz11VsXjlWgIEryqEEb/0uRQBfL8gkx/ux60Llt4SBPlmYxhtqfZvIBab0rLnWUAS+xY0IAMgT6ULRRwD0lmmA1YwhxK14/Tph3+EY+pdHF8N+QUdXlMnX2xjligEr5CuTgkatdj488O9DwHtpF0mlAr37ZKw8OJxOLFbHBj07SiJQcFJpvhE0ZlAF6tZCQcsBlhzoZAXqS1kr2rCcaFEEzq6MdHU3g6BUk9jdf2B7lSNovwfnp+tTwg9mj9yxTG9efmfjJdHanpzknGun2UMsAnH4CYVozu5e8GNRmc='
+    on_success: always
+    on_failure: always
