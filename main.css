@@ -1,0 +1,12 @@
+body {
+    background: #424242;
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: #dadada;
+    font-size: 18px;
+}
+
+a {
+    color: #dadada;
+}
