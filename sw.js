@@ -23,7 +23,7 @@ function settingUpWorkbox() {
 
   // Cache pictures
   workbox.routing.registerRoute(
-    /.*\(?:png|jpg|jpeg|svg|gif)/,
+    /.*\.(?:png|jpg|jpeg|svg|gif)/,
     // Use the cache if it's available
     workbox.strategies.cacheFirst({
       // custom name
