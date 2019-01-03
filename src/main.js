@@ -1,4 +1,6 @@
 import './main.css';
+import './img/miku.png';
+import './img/luka.png';
 
 // Check service worker registration
 if ('serviceWorker' in navigator) {
