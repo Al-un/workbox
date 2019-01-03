@@ -8,7 +8,9 @@ function settingUpWorkbox() {
   // Cache JavaScript files
   workbox.routing.registerRoute(
     new RegExp('.*.js'),
-    workbox.strategies.networkFirst()
+    workbox.strategies.networkFirst({
+        cacheName: 'workbox/cache-js'
+    })
   );
 
   // Cache CSS files
@@ -17,7 +19,7 @@ function settingUpWorkbox() {
     // Cached but updated in background ASAP
     workbox.strategies.staleWhileRevalidate({
       // custom cache name
-      cacheName: 'css-cache'
+      cacheName: 'workbox/cache-css'
     })
   );
 
@@ -27,7 +29,7 @@ function settingUpWorkbox() {
     // Use the cache if it's available
     workbox.strategies.cacheFirst({
       // custom name
-      cacheName: 'image-cache',
+      cacheName: 'workbox/cache-image',
       plugins: [
         new workbox.expiration.Plugin({
           // max cache count
