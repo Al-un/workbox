@@ -12,4 +12,9 @@ Getting started with Workbox https://developers.google.com/web/tools/workbox/gui
    - Install workbox-cli (hence _yarn.lock_/_package.json_) => given up
    - Precache to make it available offline
 
+## Branches
 
+- `master` current working branch
+- `gh-pages` Github pages
+- `freeze/manual` freezing the state where the web content was manual. `master`
+  uses webpack
