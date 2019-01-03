@@ -1,0 +1,17 @@
+{
+  "name": "workbox",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "https://github.com/Al-un/workbox.git",
+  "author": "Al-un <alun.sng@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "workbox": "workbox"
+  },
+  "devDependencies": {
+    "workbox-build": "^3.6.3",
+    "workbox-cli": "^3.6.3"
+  }
+}
