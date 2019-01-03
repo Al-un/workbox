@@ -6,11 +6,11 @@ importScripts(
 
 function settingUpWorkbox() {
   workbox.precaching.precacheAndRoute([
-    '/img/miku.png',
-    '/favicon.ico',
-    '/index.html',
-    '/main.css',
-    '/main.js',
+    '/workbox/img/miku.png',
+    '/workbox/favicon.ico',
+    '/workbox/index.html',
+    '/workbox/main.css',
+    '/workbox/main.js',
   ]);
 
   // // Cache JavaScript files
