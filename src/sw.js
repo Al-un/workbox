@@ -5,7 +5,11 @@ importScripts(
 );
 
 function settingUpWorkbox() {
-  workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+  const cacheFromWebpackPlugin = self.__precacheManifest || [];
+  const manualCache = ['/workbox/index.html', '/workbox/favicon.ico'];
+  workbox.precaching.precacheAndRoute(
+    manualCache.concat(cacheFromWebpackPlugin)
+  );
 }
 
 if (workbox) {
