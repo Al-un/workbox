@@ -5,11 +5,16 @@ importScripts(
 );
 
 function settingUpWorkbox() {
-  const cacheFromWebpackPlugin = self.__precacheManifest || [];
-  const manualCache = ['/workbox/index.html', '/workbox/favicon.ico'];
-  workbox.precaching.precacheAndRoute(
-    manualCache.concat(cacheFromWebpackPlugin)
-  );
+  // Configuration
+  workbox.core.setCacheNameDetails({
+    prefix: 'workbox',
+    suffix: 'v1',
+    precache: 'precaching',
+    runtime: 'running'
+  });
+
+  // Cache and route
+  workbox.precaching.precacheAndRoute(self.__precacheManifest || [] );
 }
 
 if (workbox) {

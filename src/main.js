@@ -1,3 +1,4 @@
+import './sw';
 import './main.css';
 import './img/miku.png';
 import './img/luka.png';
