@@ -14,7 +14,7 @@ function settingUpWorkbox() {
   });
 
   // Cache and route
-  workbox.precaching.precacheAndRoute(self.__precacheManifest || [] );
+  workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 }
 
 if (workbox) {
