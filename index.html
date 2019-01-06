@@ -4,26 +4,50 @@
     <title>Workbox</title>
   <meta name="charset" content="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1fa3c4"><meta name="description" content="Testing Workbox"><link rel="shortcut icon" href="favicon.ico"></head>
   <body>
-    Testing
-    <a
-      href="https://developers.google.com/web/tools/workbox/guides/get-started"
+    <!-- Top navigation bar -->
+    <nav
+      class="navbar is-primary"
+      role="navigation"
+      aria-label="main navigation"
     >
-      workbox
-    </a>
+      <div class="container">
+        <!-- Brand -->
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#home"> Workbox testing </a>
 
-    <section>
-      <h4>Vocaloid</h4>
-      <p>Miku image is cached while Luka image is not.</p>
-      <div class="vocaloid-zone">
-        <div class="vocaloid">
-          <p>Miku</p>
-          <img src="./img/miku.png" alt="Hatsune Miku" />
+          <a
+            id="nav-menu-toggler"
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            onclick="app.toggleMenu();"
+          >
+            <span aria-hidden="true"></span> <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
-        <div class="vocaloid">
-          <p>Luka</p>
-          <img src="./img/luka.png" alt="Megurine Luka" />
+
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <!-- Navigation-->
+            <a class="navbar-item" href="#home">Home</a>
+            <a class="navbar-item" href="#about">About</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> Vocaloid </a>
+
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="#miku"> Hatsune Miku </a>
+                <a class="navbar-item" href="#luka"> Megurine Luka </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  <script type="text/javascript" src="main.js"></script></body>
+    </nav>
+
+    <div class="section">
+      <main id="content" class="container content"></main>
+    </div>
+  <script type="text/javascript" src="main.bundle.js"></script></body>
 </html>

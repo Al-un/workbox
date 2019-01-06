@@ -1,4 +1,4 @@
-importScripts("precache-manifest.e28e36af6d4ada8431b528149c53623c.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("precache-manifest.e1be196ad14d5943a4852c7f9f51300f.js", "https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 console.log('Hello from sw.js');
 
@@ -6,17 +6,40 @@ importScripts(
   'https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js'
 );
 
-function settingUpWorkbox() {
-  const cacheFromWebpackPlugin = self.__precacheManifest || [];
-  const manualCache = ['/workbox/index.html', '/workbox/favicon.ico'];
-  workbox.precaching.precacheAndRoute(
-    manualCache.concat(cacheFromWebpackPlugin)
-  );
-}
+/**
+ * Configure workbox for this project
+ */
+const configureWorkbox = () => {
+  // Global config?
+  workbox.setConfig({
+    // Force development build even in production
+    debug: true
+  });
+
+  // Cache naming
+  workbox.core.setCacheNameDetails({
+    prefix: 'workbox',
+    suffix: 'v1',
+    precache: 'precaching',
+    runtime: 'running'
+  });
+
+  // Log level
+  workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug);
+};
+
+/**
+ * Define cached objects
+ */
+const setWorkboxCaching = () => {
+  // Cache and route
+  workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
+};
 
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);
-  settingUpWorkbox();
+  configureWorkbox();
+  setWorkboxCaching();
 } else {
   console.log(`Boo! Workbox didn't load 😬`);
 }
