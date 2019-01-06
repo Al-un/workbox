@@ -36,14 +36,22 @@
         <div class="navbar-menu">
           <div class="navbar-start">
             <!-- Navigation-->
-            <a class="navbar-item" href="#home">Home</a>
-            <a class="navbar-item" href="#about">About</a>
+            <a class="navbar-item" href="#home" onclick="app.toggleMenu();">
+              Home
+            </a>
+            <a class="navbar-item" href="#about" onclick="app.toggleMenu();">
+              About
+            </a>
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link"> Vocaloid </a>
 
               <div class="navbar-dropdown">
-                <a class="navbar-item" href="#miku"> Hatsune Miku </a>
-                <a class="navbar-item" href="#luka"> Megurine Luka </a>
+                <a class="navbar-item" href="#miku" onclick="app.toggleMenu();">
+                  Hatsune Miku
+                </a>
+                <a class="navbar-item" href="#luka" onclick="app.toggleMenu();">
+                  Megurine Luka
+                </a>
               </div>
             </div>
           </div>
