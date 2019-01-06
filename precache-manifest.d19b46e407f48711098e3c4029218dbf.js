@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "img/luka.png"
   },
   {
-    "revision": "c393e89a3ee8a566ee26cb46e8063115",
+    "revision": "e565f19d43ea0e5aea5846bd2be19dfd",
     "url": "pages/home.html"
   },
   {
