@@ -14,6 +14,12 @@ Getting started with Workbox https://developers.google.com/web/tools/workbox/gui
    - Switching to webpack
 3. [Configure workbox](https://developers.google.com/web/tools/workbox/guides/configure-workbox)
     - custom cache name
+4. Webpack: Multiple pages
+    - website will use a SPA-like structure
+    - Using SCSS instead of pure CSS
+    - Vocaloid pages are using [markdown-loader](https://github.com/peerigon/markdown-loader)
+    - Adding [Bulma](https://bulma.io/documentation/overview/) which does not
+      go very well with Markdown
 
 ## Branches
 

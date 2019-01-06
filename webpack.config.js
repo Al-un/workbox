@@ -1,19 +1,60 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].bundle.js',
+    library: 'app'
   },
   module: {
     rules: [
+      // Dependent HTML files
+      // https://webpack.js.org/loaders/html-loader/#export-into-html-files
+      {
+        test: /\.html$/,
+        exclude: path.resolve(__dirname, 'public/index.html'),
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: '[name].[ext]', outputPath: 'pages/' }
+          },
+          'extract-loader',
+          { loader: 'html-loader', options: { minimize: true } }
+        ]
+      },
+      // Markdown
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: '[name].html', outputPath: 'pages/' }
+          },
+          'extract-loader',
+          { loader: 'html-loader' },
+          { loader: 'markdown-loader' }
+        ]
+      },
       // Stylesheets
       {
-        test: /\.css/,
-        use: ['style-loader', 'css-loader']
+        test: /\.(scss)$/,
+        use: [
+          { loader: 'style-loader' }, // inject CSS to page
+          { loader: 'css-loader' }, // translates CSS into CommonJS modules
+          {
+            loader: 'postcss-loader', // Run postcss actions
+            options: {
+              // postcss plugins, can be exported to postcss.config.js
+              plugins: function() {
+                return [require('autoprefixer')];
+              }
+            }
+          },
+          { loader: 'sass-loader' } // compiles Sass to CSS
+        ]
       },
       // Pictures
       {
@@ -47,6 +88,8 @@ module.exports = {
       // for reading/debugging
       minify: false
     }),
+    // Cleaner
+    new CleanWebpackPlugin(['dist'], { verbose: true }),
     // Workbox plugin
     new WorkboxPlugin.InjectManifest({
       swSrc: './src/sw.js'

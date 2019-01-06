@@ -1,0 +1,39 @@
+@charset "utf-8";
+// Bulma customization
+// Miku color code: https://www.color-hex.com/color-palette/19601
+$primary: #137a7f;
+$link: $primary;
+$body-background-color: #373b3e;
+// Bulma import
+@import '~bulma';
+@import './styles/vocaloid';
+/**
+ * Bulma override
+ */
+
+body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: #dae7ef;
+    font-size: 18px;
+}
+
+nav {
+    color: #c0def7 !important;
+    border-bottom: 2px solid #e12885;
+    a {
+        color: #c0def7 !important;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+strong {
+    color: #c0def7 !important;
+}
