@@ -20,12 +20,14 @@
   "main.js": "main.bundle.js",
   "favicon.ico": "favicon.ico",
   "img/luka.png": "img/luka.png",
+  "img/miku-chibi-by-chipmunkintheblender-192.png": "img/miku-chibi-by-chipmunkintheblender-192.png",
+  "img/miku-chibi-by-chipmunkintheblender-512.png": "img/miku-chibi-by-chipmunkintheblender-512.png",
   "img/miku.png": "img/miku.png",
   "index.html": "index.html",
   "pages/about.html": "pages/about.html",
   "pages/home.html": "pages/home.html",
   "pages/luka.md": "pages/luka.html",
   "pages/miku.md": "pages/miku.html",
-  "precache-manifest.9c37bce2ac0c8a5a7335d6179e1848a6.js": "precache-manifest.9c37bce2ac0c8a5a7335d6179e1848a6.js",
+  "precache-manifest.c913eaa5a90eacd702ef3fca758ba3f5.js": "precache-manifest.c913eaa5a90eacd702ef3fca758ba3f5.js",
   "sw.js": "sw.js"
 }

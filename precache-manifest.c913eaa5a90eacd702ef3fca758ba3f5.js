@@ -1,6 +1,6 @@
 self.__precacheManifest = [
   {
-    "revision": "057415a6f4f28b7eb9f8",
+    "revision": "038f0d95f4d2f06684d9",
     "url": "main.bundle.js"
   },
   {
@@ -10,6 +10,14 @@ self.__precacheManifest = [
   {
     "revision": "c099459b7a8aab622faff1e58932cb47",
     "url": "img/luka.png"
+  },
+  {
+    "revision": "4a8ab8424623a95efd76cd95f91c8ac5",
+    "url": "img/miku-chibi-by-chipmunkintheblender-512.png"
+  },
+  {
+    "revision": "3ba4aaf0cb6b558ac891ca7010862de6",
+    "url": "img/miku-chibi-by-chipmunkintheblender-192.png"
   },
   {
     "revision": "e565f19d43ea0e5aea5846bd2be19dfd",
