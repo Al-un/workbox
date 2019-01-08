@@ -108,7 +108,7 @@ module.exports = {
             type: 'image/png'
           }
         ],
-        start_url: 'index.html',
+        start_url: './index.html',
         display: 'standalone',
         background_color: '#101111',
         theme_color: '#81d8d0'
