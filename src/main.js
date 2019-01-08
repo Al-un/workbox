@@ -1,6 +1,8 @@
 // Pictures
 import './img/miku.png';
 import './img/luka.png';
+import './img/miku-chibi-by-chipmunkintheblender-512.png';
+import './img/miku-chibi-by-chipmunkintheblender-192.png';
 // Styles
 import './main.scss';
 // Dependent HTML pages
