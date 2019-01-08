@@ -2,6 +2,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
   entry: './src/main.js',
@@ -90,6 +91,29 @@ module.exports = {
     }),
     // Cleaner
     new CleanWebpackPlugin(['dist'], { verbose: true }),
+    // Manifest
+    new ManifestPlugin({
+      seed: {
+        name: 'Workbox testing',
+        short_name: 'workbox',
+        icons: [
+          {
+            src: './img/miku-chibi-by-chipmunkintheblender-192.png',
+            sizes: '192x194',
+            type: 'image/png'
+          },
+          {
+            src: './img/miku-chibi-by-chipmunkintheblender-512.png',
+            sizes: '512x518',
+            type: 'image/png'
+          }
+        ],
+        start_url: './index.html',
+        display: 'standalone',
+        background_color: '#101111',
+        theme_color: '#81D8D0'
+      }
+    }),
     // Workbox plugin
     new WorkboxPlugin.InjectManifest({
       swSrc: './src/sw.js'
