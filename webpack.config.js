@@ -83,7 +83,7 @@ module.exports = {
       meta: {
         charset: 'utf-8',
         viewport: 'width=device-width, initial-scale=1',
-        'theme-color': '#1fa3c4',
+        'theme-color': '#81d8d0',
         description: 'Testing Workbox'
       },
       // for reading/debugging
@@ -94,24 +94,24 @@ module.exports = {
     // Manifest
     new ManifestPlugin({
       seed: {
-        name: 'Workbox testing',
+        name: 'Workbox',
         short_name: 'workbox',
         icons: [
           {
             src: './img/miku-chibi-by-chipmunkintheblender-192.png',
-            sizes: '192x194',
+            sizes: '192x192',
             type: 'image/png'
           },
           {
             src: './img/miku-chibi-by-chipmunkintheblender-512.png',
-            sizes: '512x518',
+            sizes: '512x512',
             type: 'image/png'
           }
         ],
-        start_url: './index.html',
+        start_url: 'index.html',
         display: 'standalone',
         background_color: '#101111',
-        theme_color: '#81D8D0'
+        theme_color: '#81d8d0'
       }
     }),
     // Workbox plugin
