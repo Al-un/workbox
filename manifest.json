@@ -1,22 +1,22 @@
 {
-  "name": "Workbox testing",
+  "name": "Workbox",
   "short_name": "workbox",
   "icons": [
     {
       "src": "./img/miku-chibi-by-chipmunkintheblender-192.png",
-      "sizes": "192x194",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
       "src": "./img/miku-chibi-by-chipmunkintheblender-512.png",
-      "sizes": "512x518",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#101111",
-  "theme_color": "#81D8D0",
+  "theme_color": "#81d8d0",
   "main.js": "main.bundle.js",
   "favicon.ico": "favicon.ico",
   "img/luka.png": "img/luka.png",
@@ -26,6 +26,6 @@
   "pages/home.html": "pages/home.html",
   "pages/luka.md": "pages/luka.html",
   "pages/miku.md": "pages/miku.html",
-  "precache-manifest.9e9e23cfa4d6d1e4b3c6024ca21a2320.js": "precache-manifest.9e9e23cfa4d6d1e4b3c6024ca21a2320.js",
+  "precache-manifest.1f97a2b4c0c2b7f31bd5efdd4dea9760.js": "precache-manifest.1f97a2b4c0c2b7f31bd5efdd4dea9760.js",
   "sw.js": "sw.js"
 }
