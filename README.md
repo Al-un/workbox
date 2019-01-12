@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Al-un/workbox.svg?branch=master)](https://travis-ci.com/Al-un/workbox)
+
 # Workbox tutorial
 
 Getting started with Workbox https://developers.google.com/web/tools/workbox/guides/get-started
