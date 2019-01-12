@@ -17,7 +17,7 @@ const configureWorkbox = () => {
   // Cache naming
   workbox.core.setCacheNameDetails({
     prefix: 'workbox',
-    suffix: 'v1',
+    suffix: 'v2',
     precache: 'precaching',
     runtime: 'running'
   });
