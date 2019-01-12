@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "img/miku-chibi-by-chipmunkintheblender-192.png"
   },
   {
-    "revision": "e565f19d43ea0e5aea5846bd2be19dfd",
+    "revision": "dd010742e9259460e497aa35fe70e418",
     "url": "pages/home.html"
   },
   {
